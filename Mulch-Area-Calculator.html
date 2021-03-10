@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<!--
+    Name: Tristan Anderson
+    Date: 1/4/2021
+    Filename: Mulch-Area-Calculator.html
+    Purpose: This page is intended to calculate how much mulch in cubic feet will be necessary
+             based on desired depth of mulch and area to be mulched.
+-->
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="bulma-0.9.1/bulma/css/bulma.css">
+
+    <title>Lawn Life - Mulch Calculator</title>
+</head>
+
+<body>
+    <section class="hero is-small is-success">
+
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item">
+                    <img src="preview-images/mulch-hands.jpg" width="45" height="100" alt="small mulch image">
+                </a>
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                    data-target="navigateSite">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="navigateSite" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item" id="homePage">
+                        Home
+                    </a>
+                    <a class="navbar-item" id="mulchCalc">
+                        Mulch Calculator
+                    </a>
+                    <a class="navbar-item" id="aboutUs">
+                        About Us
+                    </a>
+
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                            Products
+                        </a>
+                        <div class="navbar-dropdown">
+                            <a id="locateMulch" style="color: black" class="navbar-item">
+                                Mulch
+                            </a>
+                            <a id="locateSoil" style="color: black" class="navbar-item">
+                                Top Soil
+                            </a>
+                            <a id="locateSand" style="color: black" class="navbar-item">
+                                Sand
+                            </a>
+                            <hr class="navbar-divider">
+                            <a style="color: black" class="navbar-item">
+                                Report an Issue
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="navbar-end"></div>
+            </div>
+        </nav>
+        <div class="hero-body">
+            <div class="container"></div>
+            <h1 class="title is-1">Lawn Life</h1>
+            <h1 class="subtitle">Where your lawn finds life</h1>
+        </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h1 class="title">Mulch Calculator</h1>
+            <h2 class="subtitle">The purpose of the mulch calculator is to help you determine how much mulch you will
+                need to order to cover the amount of area you wish alter.</h2>
+            <h2 class="subtitle">The average depth of mulch for good coverage is 3 inches but if you wish to modify this
+                to your liking you are more than welcome!</h2>
+            <h2 class="subtitle">Let's get calculating!!</h2>
+        </div>
+        <div class="container">
+            <div class="columns">
+                <div class="column"></div>
+                <div class="column">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-header-title is-centered">Calculator</div>
+                        </div>
+                        <div class="card-content">
+                            <table>
+                                <tr>
+                                    <td style="padding: 10px">
+                                        Length(ft)<br>
+                                        <input type="text" id="length" />
+                                    </td>
+                                    <td style="padding: 10px">
+                                        Depth(in):<br>
+                                        <select id="depth" name="depth">
+                                            <option value="1">1</option>
+                                            <option value="1.5">1.5</option>
+                                            <option value="2">2</option>
+                                            <option value="2.5">2.5</option>
+                                            <option value="3">3</option>
+                                            <option value="3.5">3.5</option>
+                                            <option value="4">4</option>
+                                            <option value="4.5">4.5</option>
+                                            <option value="5">5</option>
+                                            <option value="5.5">5.5</option>
+                                            <option value="6">6</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px">
+                                        Width(ft):<br>
+                                        <input type="text" id="width" />
+                                    </td>
+                                    <td style="padding: 10px">
+                                        <br>
+                                        <input type="button" id="sendDimensions" value="Submit" onclick="calcArea()" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="card-footer">
+                            <div class="card-footer-item" id="result">0.00 cubic yards</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column"></div>
+            </div>
+        </div>
+    </section>
+    <script src="processRequest.js"></script>
+</body>
+
+</html>

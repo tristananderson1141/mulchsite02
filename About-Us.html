@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<!--
+    Name: Tristan Anderson
+    Date: 1/5/2021
+    Filename: About-Us.html
+    Purpose: Provides personal information about Lawn Life including location, hours, contact info, and a more detailed description of the company
+-->
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="bulma-0.9.1/bulma/css/bulma.css">
+    <title>Lawn Life - About Us</title>
+</head>
+
+<body>
+    <section class="hero is-small is-success">
+
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item">
+                    <img src="preview-images/mulch-hands.jpg" width="45" height="100" alt="small mulch image">
+                </a>
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                    data-target="navigateSite">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="navigateSite" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item" id="homePage">
+                        Home
+                    </a>
+                    <a class="navbar-item" id="mulchCalc">
+                        Mulch Calculator
+                    </a>
+                    <a class="navbar-item" id="aboutUs">
+                        About Us
+                    </a>
+
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                            Products
+                        </a>
+                        <div class="navbar-dropdown">
+                            <a id="locateMulch" style="color: black" class="navbar-item">
+                                Mulch
+                            </a>
+                            <a id="locateSoil" style="color: black" class="navbar-item">
+                                Top Soil
+                            </a>
+                            <a id="locateSand" style="color: black" class="navbar-item">
+                                Sand
+                            </a>
+                            <hr class="navbar-divider">
+                            <a style="color: black" class="navbar-item">
+                                Report an Issue
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="navbar-end"></div>
+            </div>
+        </nav>
+        <div class="hero-body">
+            <div class="container"></div>
+            <h1 class="title is-1">Lawn Life</h1>
+            <h2 class="subtitle">Where your lawn finds life</h2>
+        </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="columns">
+            <div class="column">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-header-title is-centered">Location</div>
+                    </div>
+                    <div class="card-content">
+                        <p style="text-align: center">2612 NC-97 Wendell, NC 27591</p>
+                    </div>
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img src="preview-images/store-location-imageB.jpg" alt="Placeholder image">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-header-title is-centered">Store Hours</div>
+                    </div>
+                    <div class="card-content">
+                        Store Hours info goes here
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-header-title is-centered">Contact Information</div>
+                    </div>
+                    <div class="card-content">
+                        Contact info goes here
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="processRequest.js"></script>
+</body>
+
+</html>
