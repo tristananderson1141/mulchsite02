@@ -41,7 +41,7 @@ function calcArea() {
 
     var area = length * width * depth;
 
-    area = area / 3;
+    area = area / 27;
     area = area.toFixed(2);
 
     var result = area + " cubic yards"
