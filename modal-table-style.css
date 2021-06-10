@@ -1,0 +1,15 @@
+th.modal-table-head {
+    font-size:24px;
+    padding-inline-end:25px;
+    padding-bottom:10px;
+}
+
+td.modal-table-data {
+    font-size:20px;
+    padding-inline-end:25px;
+    padding-bottom:10px;
+}
+
+li.product-card {
+    padding:5px;
+}
