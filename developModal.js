@@ -2,7 +2,7 @@
 
 
 //Practice using JSON requests XMLHttpRequest();
-let requestURL = 'https://github.com/tristananderson1141/mulchsite02/blob/develop/products.json';
+let requestURL = 'https://tristananderson1141.github.io/mulchsite02/products.json';
 let request = new XMLHttpRequest();
 
 request.open('GET', requestURL);
