@@ -105,7 +105,7 @@
     <section class="section">
         <h2 id="mulchHeader" style="text-align:center" class="title">Mulch</h2>
         <div class="columns">
-            <div class="column"><!--Check style rules for spacing, text overflow with cutoff value, elipses, whitespace-->
+            <div class="column">
                 <div class="card">
                     <div style="background-color:rgba(165, 71, 42, 0.938)" class="card-header">
                         <div class="card-header-title is-centered">Pine Bark</div>
@@ -113,12 +113,12 @@
                     <div style="background-color:rgba(165, 71, 42, 0.425)" class="card-content">
                         <ul>
                             <li class="product-card">
-                                <button class="button is-rounded" style="width: 250px;" id="pb-nug-button">
+                                <button class="button is-rounded" style="width: 250px;" id="pbn-button">
                                     Pine Bark Nuggets
                                 </button>
                             </li>
                             <li class="product-card">
-                                <button class="button is-rounded" style="width: 250px;" id="pb-mini-nug-button">
+                                <button class="button is-rounded" style="width: 250px;" id="pbmn-button">
                                     Pine Bark Mini Nuggets
                                 </button>
                             </li>
@@ -333,7 +333,7 @@
                     <div style="background-color:seashell" class="card-content">
                         <ul>
                             <li class="product-card">
-                                <button class="button is-rounded" style="width: 250px;" id="pea-grvl-button">
+                                <button class="button is-rounded" style="width: 250px;" id="pg-button">
                                     Pea Gravel
                                 </button>
                             </li>
@@ -366,7 +366,7 @@
                     <div style="background-color:lightgrey" class="card-content">
                         <ul>
                             <li class="product-card">
-                                <button class="button is-rounded" style="width: 250px;" id="top-soil-button">
+                                <button class="button is-rounded" style="width: 250px;" id="ts-button">
                                     Top Soil
                                 </button>
                             </li>
@@ -387,21 +387,21 @@
         </div>
     </section>
 
-    <!-- Pea Gravel Modal-->
+    <!-- Trial Default Modal-->
     <!-- values will be populated from a separate file (CSV or JSON), anything currently present is for 
             example purposes only (5/31/2021) -->
-            <div class="modal" id="pea-grvl-modal">
-                <div class="modal-background" id="pg-modal-Bg"></div>
+            <div class="modal" id="default-modal">
+                <div class="modal-background" id="modal-bg"></div>
                 <div class="modal-card">
                     <header class="modal-card-head has-text-centered">
-                        <p class="modal-card-title"><strong>Pea Gravel</strong></p>
-                        <button class="delete" aria-label="close" id="pg-close"></button>
+                        <p class="modal-card-title" id="modal-header"><strong>Default</strong></p>
+                        <button class="delete" aria-label="close" id="default-close"></button>
                     </header>
                     <section class="modal-card-body">
                         <div class="columns">
                             <div class="column">
                                 <figure class="image">
-                                    <img src="preview-images/pea-gravel-hands-B.png" alt="image of pea gravel" style="width:320px;height:320px;">
+                                    <img src="preview-images/mulch-hands.jpg" alt="default image" id="modal-img" style="width:320px;height:320px;">
                                 </figure>
                             </div>
                             <div class="column">
@@ -414,39 +414,39 @@
                                             Price
                                         </th>
                                     <tr>
-                                        <td class="modal-table-data" id="pg-quant-01">
-                                            3 cubic yards  
+                                        <td class="modal-table-data" id="quant-01">
+                                            Default 
                                         </td>
-                                        <td class="modal-table-data" id="pg-price-01">
-                                            $ 50.00
+                                        <td class="modal-table-data" id="price-01">
+                                            Default
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="modal-table-data" id="pg-quant-02">
-                                            25 cubic yards  
+                                        <td class="modal-table-data" id="quant-02">
+                                            Default 
                                         </td>
-                                        <td class="modal-table-data" id="pg-price-02">
-                                            $ 250.00
+                                        <td class="modal-table-data" id="price-02">
+                                            Default
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <button class="button is-primary" id="mulchCalcModal-pg">Calculator</button>
+                                            <button class="button is-primary" id="mulchCalcModal">Calculator</button>
                                         </td>
                                     </tr>
                                 </table>                    
                             </div>   
                         </div>
                     </section>
-                    <footer class="modal-card-foot has-text-centered" style="background-color:lightgreen;">
-                        <p class="modal-card-title">Availability: In Stock</p>
+                    <footer class="modal-card-foot has-text-centered" id="available-color" style="background-color:grey;">
+                        <p class="modal-card-title" id="availability">Availability: Default</p>
                     </footer>
                 </div>
             </div>
 
-    <!-- Top Soil Modal-->
-    <!-- values will be populated from a separate file (CSV or JSON), anything currently present is for 
-            example purposes only (5/31/2021) -->
+    <!-- Top Soil Modal
+    values will be populated from a separate file (CSV or JSON), anything currently present is for 
+            example purposes only (5/31/2021)
     <div class="modal" id="top-soil-modal">
         <div class="modal-background" id="ts-modal-Bg"></div>
         <div class="modal-card">
@@ -500,10 +500,9 @@
             </footer>
         </div>
     </div>
-
+    -->
     <script src="processRequest.js"></script>
     <script src="developModal.js"></script>
-    <script src="modal-csv.js"></script>
 </body>
 
 </html>
