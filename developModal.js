@@ -1,17 +1,29 @@
 // Purpose: Provide modals for product information
 
-/*
+
 //Practice using JSON requests XMLHttpRequest();
-let requestURL = 'products.json';
+let requestURL = 'https://github.com/tristananderson1141/mulchsite02/blob/develop/products.json';
 let request = new XMLHttpRequest();
 
 request.open('GET', requestURL);
-request.responseType = 'json';
+request.responseType = 'text';
 request.send();
 
-const productsText = request.response;
-const products = JSON.parse(productsText);
-*/
+request.onload = function() {
+    const productsText = request.response;
+    const products = JSON.parse(productsText);
+
+    populateProductLine(products);
+}
+
+//populates global variable productLine with the json objects
+const productLine = {};
+function populateProductLine(obj) {
+    var i;
+    for (i = 0; i < obj.length; i++) {
+        productLine[i] = obj[i];
+    }
+}
 
 
 //all elements of the modal converted to variables
@@ -28,17 +40,20 @@ var available = false;
 
 //functions used to manipulate modal variables based on the product
 //button clicked by the user
+
+//===PINE BARK===
+//===Pine Bark Nuggets===
 function displayPineBarkNuggets() {
     defaultModal.classList.add("is-active");
-    modalHeader.innerHTML = "<strong>Pine Bark Mini Nuggets</strong>";
-    modalImage.src = "preview-images/mulch-hands.jpg";
-    quant01.innerHTML = 3 + " cubic yards";
-    quant02.innerHTML = 75 + " cubic yards";
-    price01.innerHTML = "$ " + 29.99;
-    price02.innerHTML = "$ " + 210.00;
+    modalHeader.innerHTML = "<strong>" + productLine[0].name + "</strong>";
+    modalImage.src = productLine[0].image;
+    quant01.innerHTML = productLine[0].quantity01 + " cubic yards";
+    quant02.innerHTML = productLine[0].quantity02 + " cubic yards";
+    price01.innerHTML = "$ " + productLine[0].price01;
+    price02.innerHTML = "$ " + productLine[0].price02;
     
-    available = true;
-    if (available) {
+    available = productLine[0].stock;
+    if (available == "true") {
         availability.innerHTML = "<strong>Availability: In Stock</strong>";
         availableColor.style = "background-color:lightgreen";
     }
@@ -48,17 +63,343 @@ function displayPineBarkNuggets() {
     }
 }
 
+//===Pine Bark Mini Nuggets===
+function displayPineBarkMiniNuggets() {
+    defaultModal.classList.add("is-active");
+    modalHeader.innerHTML = "<strong>" + productLine[1].name + "</strong>";
+    modalImage.src = productLine[1].image;
+    quant01.innerHTML = productLine[1].quantity01 + " cubic yards";
+    quant02.innerHTML = productLine[1].quantity02 + " cubic yards";
+    price01.innerHTML = "$ " + productLine[1].price01;
+    price02.innerHTML = "$ " + productLine[1].price02;
+    
+    available = productLine[1].stock;
+    if (available == "true") {
+        availability.innerHTML = "<strong>Availability: In Stock</strong>";
+        availableColor.style = "background-color:lightgreen";
+    }
+    else {
+        availability.innerHTML = "<strong>Availability: Out of Stock</strong>";
+        availableColor.style = "background-color:red";
+    }
+}
+
+//===Pine Bark Mulch===
+function displayPineBarkMulch() {
+    defaultModal.classList.add("is-active");
+    modalHeader.innerHTML = "<strong>" + productLine[2].name + "</strong>";
+    modalImage.src = productLine[2].image;
+    quant01.innerHTML = productLine[2].quantity01 + " cubic yards";
+    quant02.innerHTML = productLine[2].quantity02 + " cubic yards";
+    price01.innerHTML = "$ " + productLine[2].price01;
+    price02.innerHTML = "$ " + productLine[2].price02;
+    
+    available = productLine[2].stock;
+    if (available == "true") {
+        availability.innerHTML = "<strong>Availability: In Stock</strong>";
+        availableColor.style = "background-color:lightgreen";
+    }
+    else {
+        availability.innerHTML = "<strong>Availability: Out of Stock</strong>";
+        availableColor.style = "background-color:red";
+    }
+}
+
+//===Pine Bark Soil Conditioner===
+function displayPineBarkSoilCond() {
+    defaultModal.classList.add("is-active");
+    modalHeader.innerHTML = "<strong>" + productLine[3].name + "</strong>";
+    modalImage.src = productLine[3].image;
+    quant01.innerHTML = productLine[3].quantity01 + " cubic yards";
+    quant02.innerHTML = productLine[3].quantity02 + " cubic yards";
+    price01.innerHTML = "$ " + productLine[3].price01;
+    price02.innerHTML = "$ " + productLine[3].price02;
+    
+    available = productLine[3].stock;
+    if (available == "true") {
+        availability.innerHTML = "<strong>Availability: In Stock</strong>";
+        availableColor.style = "background-color:lightgreen";
+    }
+    else {
+        availability.innerHTML = "<strong>Availability: Out of Stock</strong>";
+        availableColor.style = "background-color:red";
+    }
+}
+
+//===Nursery Mulch===
+function displayNurseryMulch() {
+    defaultModal.classList.add("is-active");
+    modalHeader.innerHTML = "<strong>" + productLine[4].name + "</strong>";
+    modalImage.src = productLine[4].image;
+    quant01.innerHTML = productLine[4].quantity01 + " cubic yards";
+    quant02.innerHTML = productLine[4].quantity02 + " cubic yards";
+    price01.innerHTML = "$ " + productLine[4].price01;
+    price02.innerHTML = "$ " + productLine[4].price02;
+    
+    available = productLine[4].stock;
+    if (available == "true") {
+        availability.innerHTML = "<strong>Availability: In Stock</strong>";
+        availableColor.style = "background-color:lightgreen";
+    }
+    else {
+        availability.innerHTML = "<strong>Availability: Out of Stock</strong>";
+        availableColor.style = "background-color:red";
+    }
+}
+
+
+//===CYPRESS MULCH BLEND===
+//===Natural Cypress Blend===
+function displayNaturalCypressBlend() {
+    defaultModal.classList.add("is-active");
+    modalHeader.innerHTML = "<strong>" + productLine[5].name + "</strong>";
+    modalImage.src = productLine[5].image;
+    quant01.innerHTML = productLine[5].quantity01 + " cubic yards";
+    quant02.innerHTML = productLine[5].quantity02 + " cubic yards";
+    price01.innerHTML = "$ " + productLine[5].price01;
+    price02.innerHTML = "$ " + productLine[5].price02;
+    
+    available = productLine[5].stock;
+    if (available == "true") {
+        availability.innerHTML = "<strong>Availability: In Stock</strong>";
+        availableColor.style = "background-color:lightgreen";
+    }
+    else {
+        availability.innerHTML = "<strong>Availability: Out of Stock</strong>";
+        availableColor.style = "background-color:red";
+    }
+}
+
+//===Brown Cypress Blend===
+function displayBrownCypressBlend() {
+    defaultModal.classList.add("is-active");
+    modalHeader.innerHTML = "<strong>" + productLine[6].name + "</strong>";
+    modalImage.src = productLine[6].image;
+    quant01.innerHTML = productLine[6].quantity01 + " cubic yards";
+    quant02.innerHTML = productLine[6].quantity02 + " cubic yards";
+    price01.innerHTML = "$ " + productLine[6].price01;
+    price02.innerHTML = "$ " + productLine[6].price02;
+    
+    available = productLine[6].stock;
+    if (available == "true") {
+        availability.innerHTML = "<strong>Availability: In Stock</strong>";
+        availableColor.style = "background-color:lightgreen";
+    }
+    else {
+        availability.innerHTML = "<strong>Availability: Out of Stock</strong>";
+        availableColor.style = "background-color:red";
+    }
+}
+
+//===Red Cypress Blend===
+function displayRedCypressBlend() {
+    defaultModal.classList.add("is-active");
+    modalHeader.innerHTML = "<strong>" + productLine[7].name + "</strong>";
+    modalImage.src = productLine[7].image;
+    quant01.innerHTML = productLine[7].quantity01 + " cubic yards";
+    quant02.innerHTML = productLine[7].quantity02 + " cubic yards";
+    price01.innerHTML = "$ " + productLine[7].price01;
+    price02.innerHTML = "$ " + productLine[7].price02;
+    
+    available = productLine[7].stock;
+    if (available == "true") {
+        availability.innerHTML = "<strong>Availability: In Stock</strong>";
+        availableColor.style = "background-color:lightgreen";
+    }
+    else {
+        availability.innerHTML = "<strong>Availability: Out of Stock</strong>";
+        availableColor.style = "background-color:red";
+    }
+}
+
+//===Black Cypress Blend===
+function displayBlackCypressBlend() {
+    defaultModal.classList.add("is-active");
+    modalHeader.innerHTML = "<strong>" + productLine[8].name + "</strong>";
+    modalImage.src = productLine[8].image;
+    quant01.innerHTML = productLine[8].quantity01 + " cubic yards";
+    quant02.innerHTML = productLine[8].quantity02 + " cubic yards";
+    price01.innerHTML = "$ " + productLine[8].price01;
+    price02.innerHTML = "$ " + productLine[8].price02;
+    
+    available = productLine[8].stock;
+    if (available == "true") {
+        availability.innerHTML = "<strong>Availability: In Stock</strong>";
+        availableColor.style = "background-color:lightgreen";
+    }
+    else {
+        availability.innerHTML = "<strong>Availability: Out of Stock</strong>";
+        availableColor.style = "background-color:red";
+    }
+}
+
+
+//===COLORED MULCH===
+//===Russet Red===
+function displayRussetRed() {
+    defaultModal.classList.add("is-active");
+    modalHeader.innerHTML = "<strong>" + productLine[9].name + "</strong>";
+    modalImage.src = productLine[9].image;
+    quant01.innerHTML = productLine[9].quantity01 + " cubic yards";
+    quant02.innerHTML = productLine[9].quantity02 + " cubic yards";
+    price01.innerHTML = "$ " + productLine[9].price01;
+    price02.innerHTML = "$ " + productLine[9].price02;
+    
+    available = productLine[9].stock;
+    if (available == "true") {
+        availability.innerHTML = "<strong>Availability: In Stock</strong>";
+        availableColor.style = "background-color:lightgreen";
+    }
+    else {
+        availability.innerHTML = "<strong>Availability: Out of Stock</strong>";
+        availableColor.style = "background-color:red";
+    }
+}
+
+//===Brown Mulch===
+function displayBrownMulch() {
+    defaultModal.classList.add("is-active");
+    modalHeader.innerHTML = "<strong>" + productLine[10].name + "</strong>";
+    modalImage.src = productLine[10].image;
+    quant01.innerHTML = productLine[10].quantity01 + " cubic yards";
+    quant02.innerHTML = productLine[10].quantity02 + " cubic yards";
+    price01.innerHTML = "$ " + productLine[10].price01;
+    price02.innerHTML = "$ " + productLine[10].price02;
+    
+    available = productLine[10].stock;
+    if (available == "true") {
+        availability.innerHTML = "<strong>Availability: In Stock</strong>";
+        availableColor.style = "background-color:lightgreen";
+    }
+    else {
+        availability.innerHTML = "<strong>Availability: Out of Stock</strong>";
+        availableColor.style = "background-color:red";
+    }
+}
+
+//===Black Mulch===
+function displayBlackMulch() {
+    defaultModal.classList.add("is-active");
+    modalHeader.innerHTML = "<strong>" + productLine[11].name + "</strong>";
+    modalImage.src = productLine[11].image;
+    quant01.innerHTML = productLine[11].quantity01 + " cubic yards";
+    quant02.innerHTML = productLine[11].quantity02 + " cubic yards";
+    price01.innerHTML = "$ " + productLine[11].price01;
+    price02.innerHTML = "$ " + productLine[11].price02;
+    
+    available = productLine[11].stock;
+    if (available == "true") {
+        availability.innerHTML = "<strong>Availability: In Stock</strong>";
+        availableColor.style = "background-color:lightgreen";
+    }
+    else {
+        availability.innerHTML = "<strong>Availability: Out of Stock</strong>";
+        availableColor.style = "background-color:red";
+    }
+}
+
+
+//===HARDWOOD MULCH===
+//===Hardwood Mulch===
+function displayHardwoodMulch() {
+    defaultModal.classList.add("is-active");
+    modalHeader.innerHTML = "<strong>" + productLine[12].name + "</strong>";
+    modalImage.src = productLine[12].image;
+    quant01.innerHTML = productLine[12].quantity01 + " cubic yards";
+    quant02.innerHTML = productLine[12].quantity02 + " cubic yards";
+    price01.innerHTML = "$ " + productLine[12].price01;
+    price02.innerHTML = "$ " + productLine[12].price02;
+    
+    available = productLine[12].stock;
+    if (available == "true") {
+        availability.innerHTML = "<strong>Availability: In Stock</strong>";
+        availableColor.style = "background-color:lightgreen";
+    }
+    else {
+        availability.innerHTML = "<strong>Availability: Out of Stock</strong>";
+        availableColor.style = "background-color:red";
+    }
+}
+
+
+//===CEDAR MULCH===
+//===Cedar Mulch===
+function displayCedarMulch() {
+    defaultModal.classList.add("is-active");
+    modalHeader.innerHTML = "<strong>" + productLine[13].name + "</strong>";
+    modalImage.src = productLine[13].image;
+    quant01.innerHTML = productLine[13].quantity01 + " cubic yards";
+    quant02.innerHTML = productLine[13].quantity02 + " cubic yards";
+    price01.innerHTML = "$ " + productLine[13].price01;
+    price02.innerHTML = "$ " + productLine[13].price02;
+    
+    available = productLine[13].stock;
+    if (available == "true") {
+        availability.innerHTML = "<strong>Availability: In Stock</strong>";
+        availableColor.style = "background-color:lightgreen";
+    }
+    else {
+        availability.innerHTML = "<strong>Availability: Out of Stock</strong>";
+        availableColor.style = "background-color:red";
+    }
+}
+
+
+//===SAND===
+//===Concrete Sand===
+function displayConcreteSand() {
+    defaultModal.classList.add("is-active");
+    modalHeader.innerHTML = "<strong>" + productLine[14].name + "</strong>";
+    modalImage.src = productLine[14].image;
+    quant01.innerHTML = productLine[14].quantity01 + " cubic yards";
+    quant02.innerHTML = productLine[14].quantity02 + " cubic yards";
+    price01.innerHTML = "$ " + productLine[14].price01;
+    price02.innerHTML = "$ " + productLine[14].price02;
+    
+    available = productLine[14].stock;
+    if (available == "true") {
+        availability.innerHTML = "<strong>Availability: In Stock</strong>";
+        availableColor.style = "background-color:lightgreen";
+    }
+    else {
+        availability.innerHTML = "<strong>Availability: Out of Stock</strong>";
+        availableColor.style = "background-color:red";
+    }
+}
+
+//===Mortar Sand===
+function displayMortarSand() {
+    defaultModal.classList.add("is-active");
+    modalHeader.innerHTML = "<strong>" + productLine[15].name + "</strong>";
+    modalImage.src = productLine[15].image;
+    quant01.innerHTML = productLine[15].quantity01 + " cubic yards";
+    quant02.innerHTML = productLine[15].quantity02 + " cubic yards";
+    price01.innerHTML = "$ " + productLine[15].price01;
+    price02.innerHTML = "$ " + productLine[15].price02;
+    
+    available = productLine[15].stock;
+    if (available == "true") {
+        availability.innerHTML = "<strong>Availability: In Stock</strong>";
+        availableColor.style = "background-color:lightgreen";
+    }
+    else {
+        availability.innerHTML = "<strong>Availability: Out of Stock</strong>";
+        availableColor.style = "background-color:red";
+    }
+}
+
+//===Pea Gravel===
 function displayPeaGravel() {
     defaultModal.classList.add("is-active");
-    modalHeader.innerHTML = "<strong>Pea Gravel</strong>";
-    modalImage.src = "preview-images/pea-gravel-hands-B.png";
-    quant01.innerHTML = 10 + " cubic yards";
-    quant02.innerHTML = 100 + " cubic yards";
-    price01.innerHTML = "$ " + 49.99;
-    price02.innerHTML = "$ " + 250.00;
+    modalHeader.innerHTML = "<strong>" + productLine[16].name + "</strong>";
+    modalImage.src = productLine[16].image;
+    quant01.innerHTML = productLine[16].quantity01 + " cubic yards";
+    quant02.innerHTML = productLine[16].quantity02 + " cubic yards";
+    price01.innerHTML = "$ " + productLine[16].price01;
+    price02.innerHTML = "$ " + productLine[16].price02;
     
-    available = true;
-    if (available) {
+    available = productLine[16].stock;
+    if (available == "true") {
         availability.innerHTML = "<strong>Availability: In Stock</strong>";
         availableColor.style = "background-color:lightgreen";
     }
@@ -68,17 +409,20 @@ function displayPeaGravel() {
     }
 }
 
+
+//===TOP SOIL===
+//===Top Soil===
 function displayTopSoil() {
     defaultModal.classList.add("is-active");
-    modalHeader.innerHTML = "<strong>Top Soil</strong>";
-    modalImage.src = "preview-images/top-soil-modal-image.jpg";
-    quant01.innerHTML = 3 + " cubic yards";
-    quant02.innerHTML = 25 + " cubic yards";
-    price01.innerHTML = "$ " + 10.75;
-    price02.innerHTML = "$ " + 75.00;
+    modalHeader.innerHTML = "<strong>" + productLine[17].name + "</strong>";
+    modalImage.src = productLine[17].image;
+    quant01.innerHTML = productLine[17].quantity01 + " cubic yards";
+    quant02.innerHTML = productLine[17].quantity02 + " cubic yards";
+    price01.innerHTML = "$ " + productLine[17].price01;
+    price02.innerHTML = "$ " + productLine[17].price02;
     
-    available = false;
-    if (available) {
+    available = productLine[17].stock;
+    if (available == "true") {
         availability.innerHTML = "<strong>Availability: In Stock</strong>";
         availableColor.style = "background-color:lightgreen";
     }
@@ -101,9 +445,24 @@ function openCalcPage2() {
 document.getElementById("mulchCalcModal").addEventListener("click", openCalcPage2);
 
 //event listeners for each product button
-document.getElementById("pbn-button").addEventListener("click", displayPineBarkNuggets);
-document.getElementById("pg-button").addEventListener("click", displayPeaGravel);
-document.getElementById("ts-button").addEventListener("click", displayTopSoil);
+document.getElementById("001-button").addEventListener("click", displayPineBarkNuggets);
+document.getElementById("002-button").addEventListener("click", displayPineBarkMiniNuggets);
+document.getElementById("003-button").addEventListener("click", displayPineBarkMulch);
+document.getElementById("004-button").addEventListener("click", displayPineBarkSoilCond);
+document.getElementById("005-button").addEventListener("click", displayNurseryMulch);
+document.getElementById("006-button").addEventListener("click", displayNaturalCypressBlend);
+document.getElementById("007-button").addEventListener("click", displayBrownCypressBlend);
+document.getElementById("008-button").addEventListener("click", displayRedCypressBlend);
+document.getElementById("009-button").addEventListener("click", displayBlackCypressBlend);
+document.getElementById("010-button").addEventListener("click", displayRussetRed);
+document.getElementById("011-button").addEventListener("click", displayBrownMulch);
+document.getElementById("012-button").addEventListener("click", displayBlackMulch);
+document.getElementById("013-button").addEventListener("click", displayHardwoodMulch);
+document.getElementById("014-button").addEventListener("click", displayCedarMulch);
+document.getElementById("015-button").addEventListener("click", displayConcreteSand);
+document.getElementById("016-button").addEventListener("click", displayMortarSand);
+document.getElementById("017-button").addEventListener("click", displayPeaGravel);
+document.getElementById("018-button").addEventListener("click", displayTopSoil);
 
 //event listeners for elements that can close the modal
 document.getElementById("default-close").addEventListener("click", hideModal);
