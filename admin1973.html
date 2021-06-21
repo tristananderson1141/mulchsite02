@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<!--
+    Name: Tristan Anderson
+    Date: 6/16/2021
+    Filename: admin1973.html
+    Purpose: Provide UI for admin to alter product information
+-->
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="bulma-0.9.1/bulma/css/bulma.css">
+        <link rel="stylesheet" href="modal-table-style.css">
+        <title>Lawn Life - Admin</title>
+    </head>
+
+    <body>
+        <!--Webpage Header-->
+        <section class="hero is-small is-success">
+            <div class="hero-body">
+                <div class="container"></div>
+                <h1 class="title is-1">Lawn Life - Admin Page</h1>
+                <h1 class="subtitle">Where your lawn finds life</h1>
+            </div>
+        </section>
+
+        <!--Body of page containing a select menu which will display the desired
+            product card-->
+        <section class="section">
+            <div class="container">
+                <div class="columns">
+                    <div class="column">
+                        <!--drop down menu for selecting any given product for editing/viewing-->
+                        <select name="productList" id="listProduct">
+                            <option value="001">Pine Bark Nuggets</option>
+                            <option value="002">Pine Bark Mini Nuggets</option>
+                            <option value="003">Pine Bark Mulch</option>
+                            <option value="004">Pine Bark Soil Conditioner</option>
+                            <option value="005">Nursery Mulch</option>
+                            <option value="006">Natural Cypress Blend</option>
+                            <option value="007">Brown Cypress Blend</option>
+                            <option value="008">Red Cypress Blend</option>
+                            <option value="009">Black Cypress Blend</option>
+                            <option value="010">Russet Red</option>
+                            <option value="011">Brown Mulch</option>
+                            <option value="012">Black Mulch</option>
+                            <option value="013">Hardwood Mulch</option>
+                            <option value="014">Cedar Mulch</option>
+                            <option value="015">Concrete Sand</option>
+                            <option value="016">Mortar Sand</option>
+                            <option value="017">Pea Gravel</option>
+                            <option value="018">Top Soil</option>
+                        </select>
+                        <input type="button" id="queryProduct" value="Display" onclick="queryProduct()"/>
+                    </div>
+                    <div class="column">
+                        <div class="card">
+                        <!--Send specific product info to PHP file to update the JSON file-->
+                        <form action="productPHP.php" method="post">
+                            <div class="card-header">
+                                <div class="card-header-title is-centered" id="product-name">Default</div>
+                            </div>
+                            <div class="card-content">
+                                <table>
+                                    <tr>
+                                        <td>Product ID:</td>
+                                        <td>
+                                            <input type="text" id="id-num" name="id-num" value="000" readonly>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Quantity 1:</td>
+                                        <td>
+                                            <input type="text" id="quantity-01" name="quantity-01" value="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Quantity 2:</td>
+                                        <td>
+                                            <input type="text" id="quantity-02" name="quantity-02" value="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Price 1:</td>
+                                        <td>
+                                            <input type="text" id="price-01" name="price-01" value="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Price 2:</td>
+                                        <td>
+                                            <input type="text" id="price-02" name="price-02" value="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Availablility:</td>
+                                        <td id="stock">
+                                            <select name="in-stock" id="in-stock" name="in-stock">
+                                                <option value="true">True</option>
+                                                <option value="false">False</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </table>
+                                
+                            </div>
+                            <div class="card-footer">
+                                <div class="card-footer-item">
+                                    <p><input type ="submit" id="submit-update" value ="Submit"/></p>
+                                </div>
+                            </div>
+
+                        </form>
+                        <!--end form to php file-->
+                        </div>
+                    </div>
+                    <div class="column">
+                        <!--list of products and their associated keys-->
+                        <h1 style="font-weight:bold;">Products and Associated Keys</h1><br>
+                        <ul style="list-style-type:disc; padding-left:10px">
+                            <li>001 - Pine Bark Nuggets</li>
+                            <li>002 - Pine Bark Mini Nuggets</li>
+                            <li>003 - Pine Bark Mulch</li>
+                            <li>004 - Pine Bark Soil Conditioner</li>
+                            <li>005 - Nursery Mulch</li>
+                            <li>006 - Natural Cypress Blend</li>
+                            <li>007 - Brown Cypress Blend</li>
+                            <li>008 - Red Cypress Blend</li>
+                            <li>009 - Black Cypress Blend</li>
+                            <li>010 - Russet Red</li>
+                            <li>011 - Brown Mulch</li>
+                            <li>012 - Black Mulch</li>
+                            <li>013 - Hardwood Mulch</li>
+                            <li>014 - Cedar Mulch</li>
+                            <li>015 - Concrete Sand</li>
+                            <li>016 - Mortar Sand</li>
+                            <li>017 - Pea Gravel</li>
+                            <li>018 - Top Soil</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="alterproducts.js"></script>
+    </body>
+</html>

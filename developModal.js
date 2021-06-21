@@ -2,7 +2,7 @@
 
 
 //Practice using JSON requests XMLHttpRequest();
-let requestURL = 'https://lawnlife.biz/products.json';
+let requestURL = 'https://lawnlife.biz/products.js';
 let request = new XMLHttpRequest();
 
 request.open('GET', requestURL);
