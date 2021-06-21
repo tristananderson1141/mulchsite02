@@ -1,5 +1,5 @@
 // Retrieve JSON file data
-let requestURL = 'https://lawnlife.biz/products.js';
+let requestURL = 'https://lawnlife.biz/products.json';
 let request = new XMLHttpRequest();
 
 request.open('GET', requestURL);
