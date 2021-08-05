@@ -47,10 +47,10 @@ function displayPineBarkNuggets() {
     defaultModal.classList.add("is-active");
     modalHeader.innerHTML = "<strong>" + productLine[0].name + "</strong>";
     modalImage.src = productLine[0].image;
-    quant01.innerHTML = productLine[0].quantity01 + " cubic yards";
-    quant02.innerHTML = productLine[0].quantity02 + " cubic yards";
-    price01.innerHTML = "$ " + productLine[0].price01;
-    price02.innerHTML = "$ " + productLine[0].price02;
+    quant01.innerHTML = productLine[0].quantity01;
+    quant02.innerHTML = productLine[0].quantity02;
+    price01.innerHTML = productLine[0].price01;
+    price02.innerHTML = productLine[0].price02;
     
     available = productLine[0].stock;
     if (available == "true") {
@@ -68,10 +68,10 @@ function displayPineBarkMiniNuggets() {
     defaultModal.classList.add("is-active");
     modalHeader.innerHTML = "<strong>" + productLine[1].name + "</strong>";
     modalImage.src = productLine[1].image;
-    quant01.innerHTML = productLine[1].quantity01 + " cubic yards";
-    quant02.innerHTML = productLine[1].quantity02 + " cubic yards";
-    price01.innerHTML = "$ " + productLine[1].price01;
-    price02.innerHTML = "$ " + productLine[1].price02;
+    quant01.innerHTML = productLine[1].quantity01;
+    quant02.innerHTML = productLine[1].quantity02;
+    price01.innerHTML = productLine[1].price01;
+    price02.innerHTML = productLine[1].price02;
     
     available = productLine[1].stock;
     if (available == "true") {
@@ -89,10 +89,10 @@ function displayPineBarkMulch() {
     defaultModal.classList.add("is-active");
     modalHeader.innerHTML = "<strong>" + productLine[2].name + "</strong>";
     modalImage.src = productLine[2].image;
-    quant01.innerHTML = productLine[2].quantity01 + " cubic yards";
-    quant02.innerHTML = productLine[2].quantity02 + " cubic yards";
-    price01.innerHTML = "$ " + productLine[2].price01;
-    price02.innerHTML = "$ " + productLine[2].price02;
+    quant01.innerHTML = productLine[2].quantity01;
+    quant02.innerHTML = productLine[2].quantity02;
+    price01.innerHTML = productLine[2].price01;
+    price02.innerHTML = productLine[2].price02;
     
     available = productLine[2].stock;
     if (available == "true") {
@@ -110,10 +110,10 @@ function displayPineBarkSoilCond() {
     defaultModal.classList.add("is-active");
     modalHeader.innerHTML = "<strong>" + productLine[3].name + "</strong>";
     modalImage.src = productLine[3].image;
-    quant01.innerHTML = productLine[3].quantity01 + " cubic yards";
-    quant02.innerHTML = productLine[3].quantity02 + " cubic yards";
-    price01.innerHTML = "$ " + productLine[3].price01;
-    price02.innerHTML = "$ " + productLine[3].price02;
+    quant01.innerHTML = productLine[3].quantity01;
+    quant02.innerHTML = productLine[3].quantity02;
+    price01.innerHTML = productLine[3].price01;
+    price02.innerHTML = productLine[3].price02;
     
     available = productLine[3].stock;
     if (available == "true") {
@@ -131,10 +131,10 @@ function displayNurseryMulch() {
     defaultModal.classList.add("is-active");
     modalHeader.innerHTML = "<strong>" + productLine[4].name + "</strong>";
     modalImage.src = productLine[4].image;
-    quant01.innerHTML = productLine[4].quantity01 + " cubic yards";
-    quant02.innerHTML = productLine[4].quantity02 + " cubic yards";
-    price01.innerHTML = "$ " + productLine[4].price01;
-    price02.innerHTML = "$ " + productLine[4].price02;
+    quant01.innerHTML = productLine[4].quantity01;
+    quant02.innerHTML = productLine[4].quantity02;
+    price01.innerHTML = productLine[4].price01;
+    price02.innerHTML = productLine[4].price02;
     
     available = productLine[4].stock;
     if (available == "true") {
@@ -154,10 +154,10 @@ function displayNaturalCypressBlend() {
     defaultModal.classList.add("is-active");
     modalHeader.innerHTML = "<strong>" + productLine[5].name + "</strong>";
     modalImage.src = productLine[5].image;
-    quant01.innerHTML = productLine[5].quantity01 + " cubic yards";
-    quant02.innerHTML = productLine[5].quantity02 + " cubic yards";
-    price01.innerHTML = "$ " + productLine[5].price01;
-    price02.innerHTML = "$ " + productLine[5].price02;
+    quant01.innerHTML = productLine[5].quantity01;
+    quant02.innerHTML = productLine[5].quantity02;
+    price01.innerHTML = productLine[5].price01;
+    price02.innerHTML = productLine[5].price02;
     
     available = productLine[5].stock;
     if (available == "true") {
@@ -175,10 +175,10 @@ function displayBrownCypressBlend() {
     defaultModal.classList.add("is-active");
     modalHeader.innerHTML = "<strong>" + productLine[6].name + "</strong>";
     modalImage.src = productLine[6].image;
-    quant01.innerHTML = productLine[6].quantity01 + " cubic yards";
-    quant02.innerHTML = productLine[6].quantity02 + " cubic yards";
-    price01.innerHTML = "$ " + productLine[6].price01;
-    price02.innerHTML = "$ " + productLine[6].price02;
+    quant01.innerHTML = productLine[6].quantity01;
+    quant02.innerHTML = productLine[6].quantity02;
+    price01.innerHTML = productLine[6].price01;
+    price02.innerHTML = productLine[6].price02;
     
     available = productLine[6].stock;
     if (available == "true") {
@@ -196,10 +196,10 @@ function displayRedCypressBlend() {
     defaultModal.classList.add("is-active");
     modalHeader.innerHTML = "<strong>" + productLine[7].name + "</strong>";
     modalImage.src = productLine[7].image;
-    quant01.innerHTML = productLine[7].quantity01 + " cubic yards";
-    quant02.innerHTML = productLine[7].quantity02 + " cubic yards";
-    price01.innerHTML = "$ " + productLine[7].price01;
-    price02.innerHTML = "$ " + productLine[7].price02;
+    quant01.innerHTML = productLine[7].quantity01;
+    quant02.innerHTML = productLine[7].quantity02;
+    price01.innerHTML = productLine[7].price01;
+    price02.innerHTML = productLine[7].price02;
     
     available = productLine[7].stock;
     if (available == "true") {
@@ -217,10 +217,10 @@ function displayBlackCypressBlend() {
     defaultModal.classList.add("is-active");
     modalHeader.innerHTML = "<strong>" + productLine[8].name + "</strong>";
     modalImage.src = productLine[8].image;
-    quant01.innerHTML = productLine[8].quantity01 + " cubic yards";
-    quant02.innerHTML = productLine[8].quantity02 + " cubic yards";
-    price01.innerHTML = "$ " + productLine[8].price01;
-    price02.innerHTML = "$ " + productLine[8].price02;
+    quant01.innerHTML = productLine[8].quantity01;
+    quant02.innerHTML = productLine[8].quantity02;
+    price01.innerHTML = productLine[8].price01;
+    price02.innerHTML = productLine[8].price02;
     
     available = productLine[8].stock;
     if (available == "true") {
@@ -240,10 +240,10 @@ function displayRussetRed() {
     defaultModal.classList.add("is-active");
     modalHeader.innerHTML = "<strong>" + productLine[9].name + "</strong>";
     modalImage.src = productLine[9].image;
-    quant01.innerHTML = productLine[9].quantity01 + " cubic yards";
-    quant02.innerHTML = productLine[9].quantity02 + " cubic yards";
-    price01.innerHTML = "$ " + productLine[9].price01;
-    price02.innerHTML = "$ " + productLine[9].price02;
+    quant01.innerHTML = productLine[9].quantity01;
+    quant02.innerHTML = productLine[9].quantity02;
+    price01.innerHTML = productLine[9].price01;
+    price02.innerHTML = productLine[9].price02;
     
     available = productLine[9].stock;
     if (available == "true") {
@@ -261,10 +261,10 @@ function displayBrownMulch() {
     defaultModal.classList.add("is-active");
     modalHeader.innerHTML = "<strong>" + productLine[10].name + "</strong>";
     modalImage.src = productLine[10].image;
-    quant01.innerHTML = productLine[10].quantity01 + " cubic yards";
-    quant02.innerHTML = productLine[10].quantity02 + " cubic yards";
-    price01.innerHTML = "$ " + productLine[10].price01;
-    price02.innerHTML = "$ " + productLine[10].price02;
+    quant01.innerHTML = productLine[10].quantity01;
+    quant02.innerHTML = productLine[10].quantity02;
+    price01.innerHTML = productLine[10].price01;
+    price02.innerHTML = productLine[10].price02;
     
     available = productLine[10].stock;
     if (available == "true") {
@@ -282,10 +282,10 @@ function displayBlackMulch() {
     defaultModal.classList.add("is-active");
     modalHeader.innerHTML = "<strong>" + productLine[11].name + "</strong>";
     modalImage.src = productLine[11].image;
-    quant01.innerHTML = productLine[11].quantity01 + " cubic yards";
-    quant02.innerHTML = productLine[11].quantity02 + " cubic yards";
-    price01.innerHTML = "$ " + productLine[11].price01;
-    price02.innerHTML = "$ " + productLine[11].price02;
+    quant01.innerHTML = productLine[11].quantity01;
+    quant02.innerHTML = productLine[11].quantity02;
+    price01.innerHTML = productLine[11].price01;
+    price02.innerHTML = productLine[11].price02;
     
     available = productLine[11].stock;
     if (available == "true") {
@@ -305,10 +305,10 @@ function displayHardwoodMulch() {
     defaultModal.classList.add("is-active");
     modalHeader.innerHTML = "<strong>" + productLine[12].name + "</strong>";
     modalImage.src = productLine[12].image;
-    quant01.innerHTML = productLine[12].quantity01 + " cubic yards";
-    quant02.innerHTML = productLine[12].quantity02 + " cubic yards";
-    price01.innerHTML = "$ " + productLine[12].price01;
-    price02.innerHTML = "$ " + productLine[12].price02;
+    quant01.innerHTML = productLine[12].quantity01;
+    quant02.innerHTML = productLine[12].quantity02;
+    price01.innerHTML = productLine[12].price01;
+    price02.innerHTML = productLine[12].price02;
     
     available = productLine[12].stock;
     if (available == "true") {
@@ -328,10 +328,10 @@ function displayCedarMulch() {
     defaultModal.classList.add("is-active");
     modalHeader.innerHTML = "<strong>" + productLine[13].name + "</strong>";
     modalImage.src = productLine[13].image;
-    quant01.innerHTML = productLine[13].quantity01 + " cubic yards";
-    quant02.innerHTML = productLine[13].quantity02 + " cubic yards";
-    price01.innerHTML = "$ " + productLine[13].price01;
-    price02.innerHTML = "$ " + productLine[13].price02;
+    quant01.innerHTML = productLine[13].quantity01;
+    quant02.innerHTML = productLine[13].quantity02;
+    price01.innerHTML = productLine[13].price01;
+    price02.innerHTML = productLine[13].price02;
     
     available = productLine[13].stock;
     if (available == "true") {
@@ -351,10 +351,10 @@ function displayConcreteSand() {
     defaultModal.classList.add("is-active");
     modalHeader.innerHTML = "<strong>" + productLine[14].name + "</strong>";
     modalImage.src = productLine[14].image;
-    quant01.innerHTML = productLine[14].quantity01 + " cubic yards";
-    quant02.innerHTML = productLine[14].quantity02 + " cubic yards";
-    price01.innerHTML = "$ " + productLine[14].price01;
-    price02.innerHTML = "$ " + productLine[14].price02;
+    quant01.innerHTML = productLine[14].quantity01;
+    quant02.innerHTML = productLine[14].quantity02;
+    price01.innerHTML = productLine[14].price01;
+    price02.innerHTML = productLine[14].price02;
     
     available = productLine[14].stock;
     if (available == "true") {
@@ -372,10 +372,10 @@ function displayMortarSand() {
     defaultModal.classList.add("is-active");
     modalHeader.innerHTML = "<strong>" + productLine[15].name + "</strong>";
     modalImage.src = productLine[15].image;
-    quant01.innerHTML = productLine[15].quantity01 + " cubic yards";
-    quant02.innerHTML = productLine[15].quantity02 + " cubic yards";
-    price01.innerHTML = "$ " + productLine[15].price01;
-    price02.innerHTML = "$ " + productLine[15].price02;
+    quant01.innerHTML = productLine[15].quantity01;
+    quant02.innerHTML = productLine[15].quantity02;
+    price01.innerHTML = productLine[15].price01;
+    price02.innerHTML = productLine[15].price02;
     
     available = productLine[15].stock;
     if (available == "true") {
@@ -393,10 +393,10 @@ function displayPeaGravel() {
     defaultModal.classList.add("is-active");
     modalHeader.innerHTML = "<strong>" + productLine[16].name + "</strong>";
     modalImage.src = productLine[16].image;
-    quant01.innerHTML = productLine[16].quantity01 + " cubic yards";
-    quant02.innerHTML = productLine[16].quantity02 + " cubic yards";
-    price01.innerHTML = "$ " + productLine[16].price01;
-    price02.innerHTML = "$ " + productLine[16].price02;
+    quant01.innerHTML = productLine[16].quantity01;
+    quant02.innerHTML = productLine[16].quantity02;
+    price01.innerHTML = productLine[16].price01;
+    price02.innerHTML = productLine[16].price02;
     
     available = productLine[16].stock;
     if (available == "true") {
@@ -416,10 +416,10 @@ function displayTopSoil() {
     defaultModal.classList.add("is-active");
     modalHeader.innerHTML = "<strong>" + productLine[17].name + "</strong>";
     modalImage.src = productLine[17].image;
-    quant01.innerHTML = productLine[17].quantity01 + " cubic yards";
-    quant02.innerHTML = productLine[17].quantity02 + " cubic yards";
-    price01.innerHTML = "$ " + productLine[17].price01;
-    price02.innerHTML = "$ " + productLine[17].price02;
+    quant01.innerHTML = productLine[17].quantity01;
+    quant02.innerHTML = productLine[17].quantity02;
+    price01.innerHTML = productLine[17].price01;
+    price02.innerHTML = productLine[17].price02;
     
     available = productLine[17].stock;
     if (available == "true") {
