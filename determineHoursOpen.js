@@ -9,6 +9,7 @@ const dt = new Date();
 
 const holidayName = document.getElementById("holiday-name");
 const holidayColumns = document.getElementById("holiday-columns");
+const holidayBreak = document.getElementById("holiday-break");
 /** 
 const monday = document.getElementById("mon");
 const tuesday = document.getElementById("tue");
@@ -34,6 +35,7 @@ if (curMonth == 1 || (curMonth == 12 && dt.getDay() > 26)) {
     holidayName.innerHTML = "New Year's Hours";
 
     holidayColumns.classList.remove("is-hidden");
+    holidayBreak.classList.remove("is-hidden");
     
     if (curMonth == 1) {
         var holidate = new Date(dt.getFullYear(), 0, 1);
@@ -55,6 +57,7 @@ else if (curMonth == 7 && dt.getDate() <= 5) {
     holidayName.innerHTML = "4th of July Hours";
 
     holidayColumns.classList.remove("is-hidden");
+    holidayBreak.classList.remove("is-hidden");
 
     var holidate = new Date(dt.getFullYear(), 6, 4);
     var dayOfWeek = holidate.getDay();
@@ -69,6 +72,8 @@ else if (curMonth == 11 && dt.getDay() > 20) {
     holidayName.innerHTML = "Thanksgiving Hours";
 
     holidayColumns.classList.remove("is-hidden");
+    holidayBreak.classList.remove("is-hidden");
+
     thursday.innerHTML = "Closed";
     thursday.style.fontWeight = "bold";
     thursday.style.color = "red";
@@ -79,6 +84,7 @@ else if (curMonth == 12 && dt.getDate() > 15 && dt.getDate() <= 26) {
     holidayName.innerHTML = "Christmas Hours";
 
     holidayColumns.classList.remove("is-hidden");
+    holidayBreak.classList.remove("is-hidden");
     
     var holidate = new Date(dt.getFullYear(), 11, 25);
     var dayOfWeek = holidate.getDay();
