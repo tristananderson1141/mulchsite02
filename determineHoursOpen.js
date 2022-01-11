@@ -29,7 +29,7 @@ weekday[6] = "sat";
 
 curMonth = dt.getMonth() + 1;
 
-if ((curMonth == 1 && dt.getDate() < 3) || (curMonth == 12 && dt.getDate() > 26)) {
+if ((curMonth == 1 && dt.getDate() < 2) || (curMonth == 12 && dt.getDate() > 26)) {
 
     holidayName.classList.remove("is-hidden");
     holidayName.innerHTML = "New Year's Hours";
@@ -51,7 +51,7 @@ if ((curMonth == 1 && dt.getDate() < 3) || (curMonth == 12 && dt.getDate() > 26)
     document.getElementById(weekday[dayOfWeek]).style.color = "red";
     
 }
-else if (curMonth == 7 && dt.getDate() <= 5) {
+else if ((curMonth == 6 && dt.getDate() > 26) || (curMonth == 7 && dt.getDate() <= 5)) {
 
     holidayName.classList.remove("is-hidden");
     holidayName.innerHTML = "4th of July Hours";
@@ -66,7 +66,7 @@ else if (curMonth == 7 && dt.getDate() <= 5) {
     document.getElementById(weekday[dayOfWeek]).style.fontWeight = "bold";
     document.getElementById(weekday[dayOfWeek]).style.color = "red";
 }
-else if (curMonth == 11 && dt.getDate() > 20) {
+else if (curMonth == 11 && dt.getDate() > 18) {
 
     holidayName.classList.remove("is-hidden");
     holidayName.innerHTML = "Thanksgiving Hours";
