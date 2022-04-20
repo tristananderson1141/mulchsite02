@@ -2,7 +2,12 @@
 
 
 //Practice using JSON requests XMLHttpRequest();
+//Production URL
 let requestURL = 'https://lawnlife.biz/products.json';
+
+//Testing URL
+//let requestURL = 'http://localhost/mulchsite02/products.json';
+
 let request = new XMLHttpRequest();
 
 request.open('GET', requestURL);
@@ -59,7 +64,7 @@ function displayPineBarkNuggets() {
     }
     else {
         availability.innerHTML = "<strong>Availability: Out of Stock</strong>";
-        availableColor.style = "background-color:red";
+        availableColor.style = "background-color:rgb(255,75,90)";
     }
 }
 
@@ -80,7 +85,7 @@ function displayPineBarkMiniNuggets() {
     }
     else {
         availability.innerHTML = "<strong>Availability: Out of Stock</strong>";
-        availableColor.style = "background-color:red";
+        availableColor.style = "background-color:rgb(255,75,90)";
     }
 }
 
@@ -101,7 +106,7 @@ function displayPineBarkMulch() {
     }
     else {
         availability.innerHTML = "<strong>Availability: Out of Stock</strong>";
-        availableColor.style = "background-color:red";
+        availableColor.style = "background-color:rgb(255,75,90)";
     }
 }
 
@@ -122,7 +127,7 @@ function displayPineBarkSoilCond() {
     }
     else {
         availability.innerHTML = "<strong>Availability: Out of Stock</strong>";
-        availableColor.style = "background-color:red";
+        availableColor.style = "background-color:rgb(255,50,50)";
     }
 }
 
@@ -143,7 +148,7 @@ function displayNurseryMulch() {
     }
     else {
         availability.innerHTML = "<strong>Availability: Out of Stock</strong>";
-        availableColor.style = "background-color:red";
+        availableColor.style = "background-color:rgb(255,75,90)";
     }
 }
 
@@ -166,7 +171,7 @@ function displayNaturalCypressBlend() {
     }
     else {
         availability.innerHTML = "<strong>Availability: Out of Stock</strong>";
-        availableColor.style = "background-color:red";
+        availableColor.style = "background-color:rgb(255,75,90)";
     }
 }
 
@@ -187,7 +192,7 @@ function displayBrownCypressBlend() {
     }
     else {
         availability.innerHTML = "<strong>Availability: Out of Stock</strong>";
-        availableColor.style = "background-color:red";
+        availableColor.style = "background-color:rgb(255,75,90)";
     }
 }
 
@@ -208,7 +213,7 @@ function displayRedCypressBlend() {
     }
     else {
         availability.innerHTML = "<strong>Availability: Out of Stock</strong>";
-        availableColor.style = "background-color:red";
+        availableColor.style = "background-color:rgb(255,75,90)";
     }
 }
 
@@ -229,7 +234,7 @@ function displayBlackCypressBlend() {
     }
     else {
         availability.innerHTML = "<strong>Availability: Out of Stock</strong>";
-        availableColor.style = "background-color:red";
+        availableColor.style = "background-color:rgb(255,75,90)";
     }
 }
 
@@ -252,7 +257,7 @@ function displayRussetRed() {
     }
     else {
         availability.innerHTML = "<strong>Availability: Out of Stock</strong>";
-        availableColor.style = "background-color:red";
+        availableColor.style = "background-color:rgb(255,75,90)";
     }
 }
 
@@ -273,7 +278,7 @@ function displayBrownMulch() {
     }
     else {
         availability.innerHTML = "<strong>Availability: Out of Stock</strong>";
-        availableColor.style = "background-color:red";
+        availableColor.style = "background-color:rgb(255,75,90)";
     }
 }
 
@@ -294,7 +299,7 @@ function displayBlackMulch() {
     }
     else {
         availability.innerHTML = "<strong>Availability: Out of Stock</strong>";
-        availableColor.style = "background-color:red";
+        availableColor.style = "background-color:rgb(255,75,90)";
     }
 }
 
@@ -317,7 +322,7 @@ function displayHardwoodMulch() {
     }
     else {
         availability.innerHTML = "<strong>Availability: Out of Stock</strong>";
-        availableColor.style = "background-color:red";
+        availableColor.style = "background-color:rgb(255,75,90)";
     }
 }
 
@@ -340,7 +345,7 @@ function displayCedarMulch() {
     }
     else {
         availability.innerHTML = "<strong>Availability: Out of Stock</strong>";
-        availableColor.style = "background-color:red";
+        availableColor.style = "background-color:rgb(255,75,90)";
     }
 }
 
@@ -363,7 +368,7 @@ function displayConcreteSand() {
     }
     else {
         availability.innerHTML = "<strong>Availability: Out of Stock</strong>";
-        availableColor.style = "background-color:red";
+        availableColor.style = "background-color:rgb(255,75,90)";
     }
 }
 
@@ -384,10 +389,11 @@ function displayMortarSand() {
     }
     else {
         availability.innerHTML = "<strong>Availability: Out of Stock</strong>";
-        availableColor.style = "background-color:red";
+        availableColor.style = "background-color:rgb(255,75,90)";
     }
 }
 
+//===GRAVEL===
 //===Pea Gravel===
 function displayPeaGravel() {
     defaultModal.classList.add("is-active");
@@ -405,14 +411,12 @@ function displayPeaGravel() {
     }
     else {
         availability.innerHTML = "<strong>Availability: Out of Stock</strong>";
-        availableColor.style = "background-color:red";
+        availableColor.style = "background-color:rgb(255,75,90)";
     }
 }
 
-
-//===TOP SOIL===
-//===Top Soil===
-function displayTopSoil() {
+//===67 Stone===
+function display67Stone() {
     defaultModal.classList.add("is-active");
     modalHeader.innerHTML = "<strong>" + productLine[17].name + "</strong>";
     modalImage.src = productLine[17].image;
@@ -428,7 +432,29 @@ function displayTopSoil() {
     }
     else {
         availability.innerHTML = "<strong>Availability: Out of Stock</strong>";
-        availableColor.style = "background-color:red";
+        availableColor.style = "background-color:rgb(255,75,90)";
+    }
+}
+
+//===TOP SOIL===
+//===Top Soil===
+function displayTopSoil() {
+    defaultModal.classList.add("is-active");
+    modalHeader.innerHTML = "<strong>" + productLine[18].name + "</strong>";
+    modalImage.src = productLine[18].image;
+    quant01.innerHTML = productLine[18].quantity01;
+    quant02.innerHTML = productLine[18].quantity02;
+    price01.innerHTML = productLine[18].price01;
+    price02.innerHTML = productLine[18].price02;
+    
+    available = productLine[18].stock;
+    if (available == "true") {
+        availability.innerHTML = "<strong>Availability: In Stock</strong>";
+        availableColor.style = "background-color:lightgreen";
+    }
+    else {
+        availability.innerHTML = "<strong>Availability: Out of Stock</strong>";
+        availableColor.style = "background-color:rgb(255,75,90)";
     }
 }
 
@@ -462,7 +488,8 @@ document.getElementById("014-button").addEventListener("click", displayCedarMulc
 document.getElementById("015-button").addEventListener("click", displayConcreteSand);
 document.getElementById("016-button").addEventListener("click", displayMortarSand);
 document.getElementById("017-button").addEventListener("click", displayPeaGravel);
-document.getElementById("018-button").addEventListener("click", displayTopSoil);
+document.getElementById("018-button").addEventListener("click", display67Stone);
+document.getElementById("019-button").addEventListener("click", displayTopSoil);
 
 //event listeners for elements that can close the modal
 document.getElementById("default-close").addEventListener("click", hideModal);
