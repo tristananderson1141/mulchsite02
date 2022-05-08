@@ -14,15 +14,66 @@ request.open('GET', requestURL);
 request.responseType = 'text';
 request.send();
 
+// stores json product data
+let productLine = {};
+
 request.onload = function() {
     const productsText = request.response;
     const products = JSON.parse(productsText);
 
-    populateProductLine(products);
+    // function call to populate productLine for use by Modal Creation
+    populateProductLine(products);    
+
+    // function call to populate preview table
+    populateTableData(productLine);
 }
 
+// =============== BEGIN PRODUCT PREVIEW TABLE POPULATION ===============
+// populates the html Table Data with the json objects Name and Price
+// for the most popular objects
+function populateTableData(obj) {
+    
+    document.getElementById("017").innerHTML = obj[16].name;
+    document.getElementById("017p").innerHTML = obj[16].price01;
+
+    document.getElementById("018").innerHTML = obj[17].name;
+    document.getElementById("018p").innerHTML = obj[17].price01;
+
+    document.getElementById("015").innerHTML = obj[14].name;
+    document.getElementById("015p").innerHTML = obj[14].price01;
+
+    document.getElementById("016").innerHTML = obj[15].name;
+    document.getElementById("016p").innerHTML = obj[15].price01;
+
+    document.getElementById("019").innerHTML = obj[18].name;
+    document.getElementById("019p").innerHTML = obj[18].price01;
+
+    document.getElementById("001").innerHTML = obj[0].name;
+    document.getElementById("001p").innerHTML = obj[0].price01;
+
+    document.getElementById("002").innerHTML = obj[1].name;
+    document.getElementById("002p").innerHTML = obj[1].price01;
+
+    document.getElementById("003").innerHTML = obj[2].name;
+    document.getElementById("003p").innerHTML = obj[2].price01;
+
+    document.getElementById("008").innerHTML = obj[7].name;
+    document.getElementById("008p").innerHTML = obj[7].price01;
+
+    document.getElementById("007").innerHTML = obj[6].name;
+    document.getElementById("007p").innerHTML = obj[6].price01;
+
+    document.getElementById("009").innerHTML = obj[8].name;
+    document.getElementById("009p").innerHTML = obj[8].price01;
+
+    document.getElementById("006").innerHTML = obj[5].name;
+    document.getElementById("006p").innerHTML = obj[5].price01;
+}
+
+// =============== END PRODUCT PREVIEW TABLE POPULATION ===============
+
+
 //populates global variable productLine with the json objects
-const productLine = {};
 function populateProductLine(obj) {
     var i;
     for (i = 0; i < obj.length; i++) {
