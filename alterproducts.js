@@ -30,7 +30,7 @@ function populateProductLine(obj) {
     }
 }
 
-
+//retrieve specific product and diplay results in alter field table
 function queryProduct() {
     var i;
     var itemNo = document.getElementById("listProduct").value;
