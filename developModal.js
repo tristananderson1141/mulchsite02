@@ -34,40 +34,43 @@ request.onload = function() {
 function populateTableData(obj) {
     
     document.getElementById("017").innerHTML = obj[16].name;
-    document.getElementById("017p").innerHTML = obj[16].price01;
-
+    document.getElementById("017PRC").innerHTML = obj[16].price01;
+    
     document.getElementById("018").innerHTML = obj[17].name;
-    document.getElementById("018p").innerHTML = obj[17].price01;
+    document.getElementById("018PRC").innerHTML = obj[17].price01;
 
     document.getElementById("015").innerHTML = obj[14].name;
-    document.getElementById("015p").innerHTML = obj[14].price01;
+    document.getElementById("015PRC").innerHTML = obj[14].price01;
 
     document.getElementById("016").innerHTML = obj[15].name;
-    document.getElementById("016p").innerHTML = obj[15].price01;
+    document.getElementById("016PRC").innerHTML = obj[15].price01;
 
     document.getElementById("019").innerHTML = obj[18].name;
-    document.getElementById("019p").innerHTML = obj[18].price01;
+    document.getElementById("019PRC").innerHTML = obj[18].price01;
 
     document.getElementById("001").innerHTML = obj[0].name;
-    document.getElementById("001p").innerHTML = obj[0].price01;
+    document.getElementById("001PRC").innerHTML = obj[0].price01;
 
     document.getElementById("002").innerHTML = obj[1].name;
-    document.getElementById("002p").innerHTML = obj[1].price01;
+    document.getElementById("002PRC").innerHTML = obj[1].price01;
 
     document.getElementById("003").innerHTML = obj[2].name;
-    document.getElementById("003p").innerHTML = obj[2].price01;
+    document.getElementById("003PRC").innerHTML = obj[2].price01;
 
     document.getElementById("008").innerHTML = obj[7].name;
-    document.getElementById("008p").innerHTML = obj[7].price01;
+    document.getElementById("008PRC").innerHTML = obj[7].price01;
 
     document.getElementById("007").innerHTML = obj[6].name;
-    document.getElementById("007p").innerHTML = obj[6].price01;
+    document.getElementById("007PRC").innerHTML = obj[6].price01;
 
     document.getElementById("009").innerHTML = obj[8].name;
-    document.getElementById("009p").innerHTML = obj[8].price01;
+    document.getElementById("009PRC").innerHTML = obj[8].price01;
 
     document.getElementById("006").innerHTML = obj[5].name;
-    document.getElementById("006p").innerHTML = obj[5].price01;
+    document.getElementById("006PRC").innerHTML = obj[5].price01;
+
+    document.getElementById("020").innerHTML = obj[19].name;
+    document.getElementById("020PRC").innerHTML = obj[19].price01;
 }
 
 // =============== END PRODUCT PREVIEW TABLE POPULATION ===============
@@ -356,7 +359,7 @@ function displayBlackMulch() {
 
 
 //===HARDWOOD MULCH===
-//===Hardwood Mulch===
+//===Shredded Hardwood Mulch===
 function displayHardwoodMulch() {
     defaultModal.classList.add("is-active");
     modalHeader.innerHTML = "<strong>" + productLine[12].name + "</strong>";
@@ -367,6 +370,27 @@ function displayHardwoodMulch() {
     price02.innerHTML = productLine[12].price02;
     
     available = productLine[12].stock;
+    if (available == "true") {
+        availability.innerHTML = "<strong>Availability: In Stock</strong>";
+        availableColor.style = "background-color:lightgreen";
+    }
+    else {
+        availability.innerHTML = "<strong>Availability: Out of Stock</strong>";
+        availableColor.style = "background-color:rgb(255,75,90)";
+    }
+}
+
+//===Hardwood Bark Mulch===
+function displayHardwoodBark() {
+    defaultModal.classList.add("is-active");
+    modalHeader.innerHTML = "<strong>" + productLine[19].name + "</strong>";
+    modalImage.src = productLine[19].image;
+    quant01.innerHTML = productLine[19].quantity01;
+    quant02.innerHTML = productLine[19].quantity02;
+    price01.innerHTML = productLine[19].price01;
+    price02.innerHTML = productLine[19].price02;
+    
+    available = productLine[19].stock;
     if (available == "true") {
         availability.innerHTML = "<strong>Availability: In Stock</strong>";
         availableColor.style = "background-color:lightgreen";
@@ -541,6 +565,7 @@ document.getElementById("016-button").addEventListener("click", displayMortarSan
 document.getElementById("017-button").addEventListener("click", displayPeaGravel);
 document.getElementById("018-button").addEventListener("click", display67Stone);
 document.getElementById("019-button").addEventListener("click", displayTopSoil);
+document.getElementById("020-button").addEventListener("click", displayHardwoodBark);
 
 //event listeners for elements that can close the modal
 document.getElementById("default-close").addEventListener("click", hideModal);
