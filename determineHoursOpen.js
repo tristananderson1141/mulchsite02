@@ -29,10 +29,11 @@ weekday[6] = "sat";
 
 curMonth = dt.getMonth() + 1;
 
+// New Year's Day
 if ((curMonth == 1 && dt.getDate() < 2) || (curMonth == 12 && dt.getDate() > 26)) {
 
     holidayName.classList.remove("is-hidden");
-    holidayName.innerHTML = "New Year's Hours";
+    holidayName.innerHTML = "Week of New Year's";
 
     holidayColumns.classList.remove("is-hidden");
     holidayBreak.classList.remove("is-hidden");
@@ -51,10 +52,11 @@ if ((curMonth == 1 && dt.getDate() < 2) || (curMonth == 12 && dt.getDate() > 26)
     document.getElementById(weekday[dayOfWeek]).style.color = "red";
     
 }
+// 4th of July
 else if ((curMonth == 6 && dt.getDate() > 26) || (curMonth == 7 && dt.getDate() <= 5)) {
 
     holidayName.classList.remove("is-hidden");
-    holidayName.innerHTML = "4th of July Hours";
+    holidayName.innerHTML = "Week of 4th of July";
 
     holidayColumns.classList.remove("is-hidden");
     holidayBreak.classList.remove("is-hidden");
@@ -66,22 +68,27 @@ else if ((curMonth == 6 && dt.getDate() > 26) || (curMonth == 7 && dt.getDate() 
     document.getElementById(weekday[dayOfWeek]).style.fontWeight = "bold";
     document.getElementById(weekday[dayOfWeek]).style.color = "red";
 }
+// Thanksgiving
 else if (curMonth == 11 && dt.getDate() > 18) {
 
     holidayName.classList.remove("is-hidden");
-    holidayName.innerHTML = "Thanksgiving Hours";
+    holidayName.innerHTML = "Week of Thanksgiving";
 
     holidayColumns.classList.remove("is-hidden");
     holidayBreak.classList.remove("is-hidden");
 
-    thursday.innerHTML = "Closed";
-    thursday.style.fontWeight = "bold";
-    thursday.style.color = "red";
+    // Loop through Thursday - Saturday and mark closed
+    for (let i = 4; i <= 7; i++) {
+        document.getElementById(weekday[i]).innerHTML = "Closed";
+        document.getElementById(weekday[i]).style.fontWeight= "bold";
+        document.getElementById(weekday[i]).style.color = "red";
+    }
 }
+// Christmas
 else if (curMonth == 12 && dt.getDate() > 15 && dt.getDate() <= 26) {
 
     holidayName.classList.remove("is-hidden");
-    holidayName.innerHTML = "Christmas Hours";
+    holidayName.innerHTML = "Week of Christmas";
 
     holidayColumns.classList.remove("is-hidden");
     holidayBreak.classList.remove("is-hidden");
