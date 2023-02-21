@@ -3,10 +3,10 @@
 
 //Practice using JSON requests XMLHttpRequest();
 //Production URL
-let requestURL = 'https://lawnlife.biz/products.json';
+//let requestURL = 'https://lawnlife.biz/products.json';
 
 //Testing URL
-//let requestURL = 'http://localhost/mulchsite02/products.json';
+let requestURL = 'http://localhost/mulchsite02/products.json';
 
 let request = new XMLHttpRequest();
 
@@ -33,20 +33,20 @@ request.onload = function() {
 // for the most popular objects
 function populateTableData(obj) {
     
-    document.getElementById("017").innerHTML = obj[16].name;
-    document.getElementById("017PRC").innerHTML = obj[16].price01;
-    
     document.getElementById("018").innerHTML = obj[17].name;
     document.getElementById("018PRC").innerHTML = obj[17].price01;
-
-    document.getElementById("015").innerHTML = obj[14].name;
-    document.getElementById("015PRC").innerHTML = obj[14].price01;
+    
+    document.getElementById("019").innerHTML = obj[18].name;
+    document.getElementById("019PRC").innerHTML = obj[18].price01;
 
     document.getElementById("016").innerHTML = obj[15].name;
     document.getElementById("016PRC").innerHTML = obj[15].price01;
 
-    document.getElementById("019").innerHTML = obj[18].name;
-    document.getElementById("019PRC").innerHTML = obj[18].price01;
+    document.getElementById("017").innerHTML = obj[16].name;
+    document.getElementById("017PRC").innerHTML = obj[16].price01;
+
+    document.getElementById("021").innerHTML = obj[20].name;
+    document.getElementById("021PRC").innerHTML = obj[20].price01;
 
     document.getElementById("001").innerHTML = obj[0].name;
     document.getElementById("001PRC").innerHTML = obj[0].price01;
@@ -69,8 +69,8 @@ function populateTableData(obj) {
     document.getElementById("006").innerHTML = obj[5].name;
     document.getElementById("006PRC").innerHTML = obj[5].price01;
 
-    document.getElementById("020").innerHTML = obj[19].name;
-    document.getElementById("020PRC").innerHTML = obj[19].price01;
+    document.getElementById("014").innerHTML = obj[13].name;
+    document.getElementById("014PRC").innerHTML = obj[13].price01;
 }
 
 // =============== END PRODUCT PREVIEW TABLE POPULATION ===============
@@ -383,29 +383,6 @@ function displayHardwoodMulch() {
 //===Hardwood Bark Mulch===
 function displayHardwoodBark() {
     defaultModal.classList.add("is-active");
-    modalHeader.innerHTML = "<strong>" + productLine[19].name + "</strong>";
-    modalImage.src = productLine[19].image;
-    quant01.innerHTML = productLine[19].quantity01;
-    quant02.innerHTML = productLine[19].quantity02;
-    price01.innerHTML = productLine[19].price01;
-    price02.innerHTML = productLine[19].price02;
-    
-    available = productLine[19].stock;
-    if (available == "true") {
-        availability.innerHTML = "<strong>Availability: In Stock</strong>";
-        availableColor.style = "background-color:lightgreen";
-    }
-    else {
-        availability.innerHTML = "<strong>Availability: Out of Stock</strong>";
-        availableColor.style = "background-color:rgb(255,75,90)";
-    }
-}
-
-
-//===CEDAR MULCH===
-//===Cedar Mulch===
-function displayCedarMulch() {
-    defaultModal.classList.add("is-active");
     modalHeader.innerHTML = "<strong>" + productLine[13].name + "</strong>";
     modalImage.src = productLine[13].image;
     quant01.innerHTML = productLine[13].quantity01;
@@ -425,9 +402,9 @@ function displayCedarMulch() {
 }
 
 
-//===SAND===
-//===Concrete Sand===
-function displayConcreteSand() {
+//===CEDAR MULCH===
+//===Cedar Mulch===
+function displayCedarMulch() {
     defaultModal.classList.add("is-active");
     modalHeader.innerHTML = "<strong>" + productLine[14].name + "</strong>";
     modalImage.src = productLine[14].image;
@@ -447,8 +424,10 @@ function displayConcreteSand() {
     }
 }
 
-//===Mortar Sand===
-function displayMortarSand() {
+
+//===SAND===
+//===Concrete Sand===
+function displayConcreteSand() {
     defaultModal.classList.add("is-active");
     modalHeader.innerHTML = "<strong>" + productLine[15].name + "</strong>";
     modalImage.src = productLine[15].image;
@@ -468,9 +447,8 @@ function displayMortarSand() {
     }
 }
 
-//===GRAVEL===
-//===Pea Gravel===
-function displayPeaGravel() {
+//===Mortar Sand===
+function displayMortarSand() {
     defaultModal.classList.add("is-active");
     modalHeader.innerHTML = "<strong>" + productLine[16].name + "</strong>";
     modalImage.src = productLine[16].image;
@@ -490,8 +468,9 @@ function displayPeaGravel() {
     }
 }
 
-//===67 Stone===
-function display67Stone() {
+//===GRAVEL===
+//===Pea Gravel===
+function displayPeaGravel() {
     defaultModal.classList.add("is-active");
     modalHeader.innerHTML = "<strong>" + productLine[17].name + "</strong>";
     modalImage.src = productLine[17].image;
@@ -511,9 +490,8 @@ function display67Stone() {
     }
 }
 
-//===TOP SOIL===
-//===Top Soil===
-function displayTopSoil() {
+//===67 Stone===
+function display67Stone() {
     defaultModal.classList.add("is-active");
     modalHeader.innerHTML = "<strong>" + productLine[18].name + "</strong>";
     modalImage.src = productLine[18].image;
@@ -523,6 +501,49 @@ function displayTopSoil() {
     price02.innerHTML = productLine[18].price02;
     
     available = productLine[18].stock;
+    if (available == "true") {
+        availability.innerHTML = "<strong>Availability: In Stock</strong>";
+        availableColor.style = "background-color:lightgreen";
+    }
+    else {
+        availability.innerHTML = "<strong>Availability: Out of Stock</strong>";
+        availableColor.style = "background-color:rgb(255,75,90)";
+    }
+}
+
+//===ABC Stone===
+function displayABCStone() {
+    defaultModal.classList.add("is-active");
+    modalHeader.innerHTML = "<strong>" + productLine[19].name + "</strong>";
+    modalImage.src = productLine[19].image;
+    quant01.innerHTML = productLine[19].quantity01;
+    quant02.innerHTML = productLine[19].quantity02;
+    price01.innerHTML = productLine[19].price01;
+    price02.innerHTML = productLine[19].price02;
+    
+    available = productLine[19].stock;
+    if (available == "true") {
+        availability.innerHTML = "<strong>Availability: In Stock</strong>";
+        availableColor.style = "background-color:lightgreen";
+    }
+    else {
+        availability.innerHTML = "<strong>Availability: Out of Stock</strong>";
+        availableColor.style = "background-color:rgb(255,75,90)";
+    }
+}
+
+//===TOP SOIL===
+//===Top Soil===
+function displayTopSoilBlend() {
+    defaultModal.classList.add("is-active");
+    modalHeader.innerHTML = "<strong>" + productLine[20].name + "</strong>";
+    modalImage.src = productLine[20].image;
+    quant01.innerHTML = productLine[20].quantity01;
+    quant02.innerHTML = productLine[20].quantity02;
+    price01.innerHTML = productLine[20].price01;
+    price02.innerHTML = productLine[20].price02;
+    
+    available = productLine[20].stock;
     if (available == "true") {
         availability.innerHTML = "<strong>Availability: In Stock</strong>";
         availableColor.style = "background-color:lightgreen";
@@ -559,13 +580,14 @@ document.getElementById("010-button").addEventListener("click", displayRussetRed
 document.getElementById("011-button").addEventListener("click", displayBrownMulch);
 document.getElementById("012-button").addEventListener("click", displayBlackMulch);
 document.getElementById("013-button").addEventListener("click", displayHardwoodMulch);
-document.getElementById("014-button").addEventListener("click", displayCedarMulch);
-document.getElementById("015-button").addEventListener("click", displayConcreteSand);
-document.getElementById("016-button").addEventListener("click", displayMortarSand);
-document.getElementById("017-button").addEventListener("click", displayPeaGravel);
-document.getElementById("018-button").addEventListener("click", display67Stone);
-document.getElementById("019-button").addEventListener("click", displayTopSoil);
-document.getElementById("020-button").addEventListener("click", displayHardwoodBark);
+document.getElementById("014-button").addEventListener("click", displayHardwoodBark);
+document.getElementById("015-button").addEventListener("click", displayCedarMulch);
+document.getElementById("016-button").addEventListener("click", displayConcreteSand);
+document.getElementById("017-button").addEventListener("click", displayMortarSand);
+document.getElementById("018-button").addEventListener("click", displayPeaGravel);
+document.getElementById("019-button").addEventListener("click", display67Stone);
+document.getElementById("020-button").addEventListener("click", displayABCStone);
+document.getElementById("021-button").addEventListener("click", displayTopSoilBlend);
 
 //event listeners for elements that can close the modal
 document.getElementById("default-close").addEventListener("click", hideModal);
