@@ -31,13 +31,49 @@ request.onload = function() {
 // =============== BEGIN PRODUCT PREVIEW TABLE POPULATION ===============
 // populates the html Table Data with the json objects Name and Price
 // for the most popular objects
-function populateTableData(obj) {
+function populateTableData(objs) {
+
+    let curNameTag;
+    let curPriceTag;
+    let len = Object.keys(objs).length;
+    let i;
+    /*
+    * This loop populates the preview table on home page
+    * Parameter: productLine - json provided list of products
+    *   - Builds the html id's for name and price of each product
+    *   - gets each element by these id's and
+    *   - sets the name and price from the parameter passed array
+    */
+    for (i = len; i > 0; i--) {
+
+        if (i > 9) {
+            curNameTag = "0" + i;
+            curPriceTag = "0" + i + "PRC";
+        }
+        else {
+            curNameTag = "00" + i;
+            curPriceTag = "00" + i + "PRC";
+        }
+
+        document.getElementById(curNameTag).innerHTML = objs[i - 1].name;
+        
+        //check if price01 is populated else use price02
+        if (objs[i - 1].price01 == "$ ---") {
+            document.getElementById(curPriceTag).innerHTML = objs[i - 1].price02;
+        }
+        else {
+            document.getElementById(curPriceTag).innerHTML = objs[i - 1].price01;
+        }
+    }
     
-    document.getElementById("018").innerHTML = obj[17].name;
-    document.getElementById("018PRC").innerHTML = obj[17].price01;
+    /* document.getElementById("023").innerHTML = obj[22].name;
+    document.getElementById("023PRC").innerHTML = obj[22].price01;
     
     document.getElementById("019").innerHTML = obj[18].name;
     document.getElementById("019PRC").innerHTML = obj[18].price01;
+
+    document.getElementById("020").innerHTML = obj[19].name;
+    document.getElementById("020PRC").innerHTML = obj[19].price01;
 
     document.getElementById("016").innerHTML = obj[15].name;
     document.getElementById("016PRC").innerHTML = obj[15].price01;
@@ -45,8 +81,8 @@ function populateTableData(obj) {
     document.getElementById("017").innerHTML = obj[16].name;
     document.getElementById("017PRC").innerHTML = obj[16].price01;
 
-    document.getElementById("021").innerHTML = obj[20].name;
-    document.getElementById("021PRC").innerHTML = obj[20].price01;
+    document.getElementById("023").innerHTML = obj[22].name;
+    document.getElementById("023PRC").innerHTML = obj[22].price01;
 
     document.getElementById("001").innerHTML = obj[0].name;
     document.getElementById("001PRC").innerHTML = obj[0].price01;
@@ -70,7 +106,7 @@ function populateTableData(obj) {
     document.getElementById("006PRC").innerHTML = obj[5].price01;
 
     document.getElementById("014").innerHTML = obj[13].name;
-    document.getElementById("014PRC").innerHTML = obj[13].price01;
+    document.getElementById("014PRC").innerHTML = obj[13].price01; */
 }
 
 // =============== END PRODUCT PREVIEW TABLE POPULATION ===============
@@ -100,9 +136,42 @@ var available = false;
 //functions used to manipulate modal variables based on the product
 //button clicked by the user
 
+// =============== TRIAL ===============
+/*
+* Single function to populate the modal
+* Parameter: ID based on the button clicked
+*   to display product modal
+* Searches productLine based on id value
+*/
+function displaySelectProduct(val) {
+
+    defaultModal.classList.add("is-active");
+    modalHeader.innerHTML = "<strong>" + productLine[val].name + "</strong>";
+    modalImage.src = productLine[val].image;
+    quant01.innerHTML = productLine[val].quantity01;
+    quant02.innerHTML = productLine[val].quantity02;
+    price01.innerHTML = productLine[val].price01;
+    price02.innerHTML = productLine[val].price02;
+    
+    available = productLine[val].stock;
+    if (available == "true") {
+        availability.innerHTML = "<strong>Availability: In Stock</strong>";
+        availableColor.style = "background-color:lightgreen";
+    }
+    else {
+        availability.innerHTML = "<strong>Availability: Out of Stock</strong>";
+        availableColor.style = "background-color:rgb(255,75,90)";
+    }
+}
+
+
+//document.getElementById("001-button").addEventListener("click", displaySelectProduct(0));
+
+// =============== END TRIAL ===============
+
 //===PINE BARK===
 //===Pine Bark Nuggets===
-function displayPineBarkNuggets() {
+/* function displayPineBarkNuggets() {
     defaultModal.classList.add("is-active");
     modalHeader.innerHTML = "<strong>" + productLine[0].name + "</strong>";
     modalImage.src = productLine[0].image;
@@ -532,9 +601,8 @@ function displayABCStone() {
     }
 }
 
-//===TOP SOIL===
-//===Top Soil===
-function displayTopSoilBlend() {
+//===78 Stone===
+function display78Stone() {
     defaultModal.classList.add("is-active");
     modalHeader.innerHTML = "<strong>" + productLine[20].name + "</strong>";
     modalImage.src = productLine[20].image;
@@ -554,6 +622,49 @@ function displayTopSoilBlend() {
     }
 }
 
+//===Rip Rap - A===
+function displayRipRap() {
+    defaultModal.classList.add("is-active");
+    modalHeader.innerHTML = "<strong>" + productLine[21].name + "</strong>";
+    modalImage.src = productLine[21].image;
+    quant01.innerHTML = productLine[21].quantity01;
+    quant02.innerHTML = productLine[21].quantity02;
+    price01.innerHTML = productLine[21].price01;
+    price02.innerHTML = productLine[21].price02;
+    
+    available = productLine[21].stock;
+    if (available == "true") {
+        availability.innerHTML = "<strong>Availability: In Stock</strong>";
+        availableColor.style = "background-color:lightgreen";
+    }
+    else {
+        availability.innerHTML = "<strong>Availability: Out of Stock</strong>";
+        availableColor.style = "background-color:rgb(255,75,90)";
+    }
+}
+
+//===TOP SOIL===
+//===Top Soil===
+function displayTopSoilBlend() {
+    defaultModal.classList.add("is-active");
+    modalHeader.innerHTML = "<strong>" + productLine[22].name + "</strong>";
+    modalImage.src = productLine[22].image;
+    quant01.innerHTML = productLine[22].quantity01;
+    quant02.innerHTML = productLine[22].quantity02;
+    price01.innerHTML = productLine[22].price01;
+    price02.innerHTML = productLine[22].price02;
+    
+    available = productLine[22].stock;
+    if (available == "true") {
+        availability.innerHTML = "<strong>Availability: In Stock</strong>";
+        availableColor.style = "background-color:lightgreen";
+    }
+    else {
+        availability.innerHTML = "<strong>Availability: Out of Stock</strong>";
+        availableColor.style = "background-color:rgb(255,75,90)";
+    }
+} */
+
 // hides the modal once the user clicks modal-background or modal close button
 function hideModal() {
     defaultModal.classList.remove("is-active");
@@ -567,7 +678,76 @@ function openCalcPage2() {
 document.getElementById("mulchCalcModal").addEventListener("click", openCalcPage2);
 
 //event listeners for each product button
-document.getElementById("001-button").addEventListener("click", displayPineBarkNuggets);
+document.getElementById("001-button").addEventListener("click", function() {
+    displaySelectProduct(0);
+});
+document.getElementById("002-button").addEventListener("click", function() {
+    displaySelectProduct(1);
+});
+document.getElementById("003-button").addEventListener("click", function() {
+    displaySelectProduct(2);
+});
+document.getElementById("004-button").addEventListener("click", function() {
+    displaySelectProduct(3);
+});
+document.getElementById("005-button").addEventListener("click", function() {
+    displaySelectProduct(4);
+});
+document.getElementById("006-button").addEventListener("click", function() {
+    displaySelectProduct(5);
+});
+document.getElementById("007-button").addEventListener("click", function() {
+    displaySelectProduct(6);
+});
+document.getElementById("008-button").addEventListener("click", function() {
+    displaySelectProduct(7);
+});
+document.getElementById("009-button").addEventListener("click", function() {
+    displaySelectProduct(8);
+});
+document.getElementById("010-button").addEventListener("click", function() {
+    displaySelectProduct(9);
+});
+document.getElementById("011-button").addEventListener("click", function() {
+    displaySelectProduct(10);
+});
+document.getElementById("012-button").addEventListener("click", function() {
+    displaySelectProduct(11);
+});
+document.getElementById("013-button").addEventListener("click", function() {
+    displaySelectProduct(12);
+});
+document.getElementById("014-button").addEventListener("click", function() {
+    displaySelectProduct(13);
+});
+document.getElementById("015-button").addEventListener("click", function() {
+    displaySelectProduct(14);
+});
+document.getElementById("016-button").addEventListener("click", function() {
+    displaySelectProduct(15);
+});
+document.getElementById("017-button").addEventListener("click", function() {
+    displaySelectProduct(16);
+});
+document.getElementById("018-button").addEventListener("click", function() {
+    displaySelectProduct(17);
+});
+document.getElementById("019-button").addEventListener("click", function() {
+    displaySelectProduct(18);
+});
+document.getElementById("020-button").addEventListener("click", function() {
+    displaySelectProduct(19);
+});
+document.getElementById("021-button").addEventListener("click", function() {
+    displaySelectProduct(20);
+});
+document.getElementById("022-button").addEventListener("click", function() {
+    displaySelectProduct(21);
+});
+document.getElementById("023-button").addEventListener("click", function() {
+    displaySelectProduct(22);
+});
+/* document.getElementById("001-button").addEventListener("click", displayPineBarkNuggets);
 document.getElementById("002-button").addEventListener("click", displayPineBarkMiniNuggets);
 document.getElementById("003-button").addEventListener("click", displayPineBarkMulch);
 document.getElementById("004-button").addEventListener("click", displayPineBarkSoilCond);
@@ -587,7 +767,9 @@ document.getElementById("017-button").addEventListener("click", displayMortarSan
 document.getElementById("018-button").addEventListener("click", displayPeaGravel);
 document.getElementById("019-button").addEventListener("click", display67Stone);
 document.getElementById("020-button").addEventListener("click", displayABCStone);
-document.getElementById("021-button").addEventListener("click", displayTopSoilBlend);
+document.getElementById("021-button").addEventListener("click", display78Stone);
+document.getElementById("022-button").addEventListener("click", displayRipRap);
+document.getElementById("023-button").addEventListener("click", displayTopSoilBlend); */
 
 //event listeners for elements that can close the modal
 document.getElementById("default-close").addEventListener("click", hideModal);

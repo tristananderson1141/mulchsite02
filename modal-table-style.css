@@ -13,3 +13,9 @@ td.modal-table-data {
 li.product-card {
     padding:5px;
 }
+
+tbody.preview-body {
+    display:block;
+    height:300px;
+    overflow:auto;
+}
