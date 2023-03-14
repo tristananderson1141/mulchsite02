@@ -133,7 +133,7 @@
     {
         "id": "014",
         "name": "Hardwood Bark Mulch",
-        "image": "",
+        "image": "modal-images\/mdl-hardwood-bark-mulch.jpg",
         "quantity01": "Cubic Yard",
         "quantity02": "One Ton",
         "price01": "$24.00",
@@ -193,7 +193,7 @@
     {
         "id": "020",
         "name": "ABC Stone",
-        "image": "",
+        "image": "modal-images\/mdl-stone-abc.jpg",
         "quantity01": "Cubic Yard",
         "quantity02": "One Ton",
         "price01": "$32.00",
