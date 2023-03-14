@@ -1,10 +1,10 @@
 // Retrieve JSON file data
 
 //Production URL
-//let requestURL = 'https://lawnlife.biz/products.json';
+let requestURL = 'https://lawnlife.biz/products.json';
 
 //Testing URL
-let requestURL = 'http://localhost/mulchsite02/products.json';
+//let requestURL = 'http://localhost/mulchsite02/products.json';
 
 let request = new XMLHttpRequest();
 
