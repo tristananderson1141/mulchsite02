@@ -91,37 +91,6 @@
     },
     {
         "id": "010",
-        "name": "Russet Red",
-        "image": "",
-        "quantity01": "Cubic Yard",
-        "quantity02": "Bag 2 Cu.Ft.",
-        "price01": "Call",
-        "price02": "TBA",
-        "stock": "true"
-    },
-    {
-        "id": "011",
-        "name": "Brown Mulch",
-        "image": "",
-        "quantity01": "Cubic Yard",
-        "quantity02": "Bag 2 Cu.Ft.",
-        "price01": "Call",
-        "price02": "TBA",
-        "stock": "true",
-        "in-stock": "true"
-    },
-    {
-        "id": "012",
-        "name": "Black Mulch",
-        "image": "",
-        "quantity01": "Cubic Yard",
-        "quantity02": "Bag 2 Cu.Ft.",
-        "price01": "Call",
-        "price02": "TBA",
-        "stock": "true"
-    },
-    {
-        "id": "013",
         "name": "Shredded Hardwood",
         "image": "modal-images\/mdl-shredded-hardwood.jpg",
         "quantity01": "Cubic Yard",
@@ -131,7 +100,7 @@
         "stock": "true"
     },
     {
-        "id": "014",
+        "id": "011",
         "name": "Hardwood Bark Mulch",
         "image": "modal-images\/mdl-hardwood-bark-mulch.jpg",
         "quantity01": "Cubic Yard",
@@ -141,7 +110,7 @@
         "stock": "true"
     },
     {
-        "id": "015",
+        "id": "012",
         "name": "Cedar Mulch",
         "image": "modal-images\/mdl-cedar-mulch.jpg",
         "quantity01": "Cubic Yard",
@@ -151,7 +120,7 @@
         "stock": "true"
     },
     {
-        "id": "016",
+        "id": "013",
         "name": "Concrete Sand",
         "image": "preview-images\/concrete-sand-hands.jpg",
         "quantity01": "Cubic Yard",
@@ -161,7 +130,7 @@
         "stock": "true"
     },
     {
-        "id": "017",
+        "id": "014",
         "name": "Mortar Sand",
         "image": "preview-images\/mortar-sand-hands.png",
         "quantity01": "Cubic Yard",
@@ -171,7 +140,7 @@
         "stock": "true"
     },
     {
-        "id": "018",
+        "id": "015",
         "name": "Pea Gravel",
         "image": "preview-images\/pea-gravel-hands-B.png",
         "quantity01": "Cubic Yard",
@@ -181,7 +150,7 @@
         "stock": "true"
     },
     {
-        "id": "019",
+        "id": "016",
         "name": "67 Stone",
         "image": "modal-images\/mdl-stone-67.jpg",
         "quantity01": "Cubic Yard",
@@ -191,7 +160,7 @@
         "stock": "true"
     },
     {
-        "id": "020",
+        "id": "017",
         "name": "ABC Stone",
         "image": "modal-images\/mdl-stone-abc.jpg",
         "quantity01": "Cubic Yard",
@@ -201,7 +170,7 @@
         "stock": "true"
     },
     {
-        "id": "021",
+        "id": "018",
         "name": "78 Stone",
         "image": "",
         "quantity01": "Cubic Yard",
@@ -211,7 +180,7 @@
         "stock": "true"
     },
     {
-        "id": "022",
+        "id": "019",
         "name": "Rip Rap - A",
         "image": "",
         "quantity01": "Cubic Yard",
@@ -221,7 +190,7 @@
         "stock": "true"
     },
     {
-        "id": "023",
+        "id": "020",
         "name": "Top Soil Blend",
         "image": "modal-images\/mdl-top-soil.jpg",
         "quantity01": "Cubic Yard",
