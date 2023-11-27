@@ -199,6 +199,9 @@ document.getElementById("019-button").addEventListener("click", function() {
 document.getElementById("020-button").addEventListener("click", function() {
     displaySelectProduct(19);
 });
+document.getElementById("021-button").addEventListener("click", function() {
+    displaySelectProduct(20);
+});
 
 
 //event listeners for elements that can close the modal

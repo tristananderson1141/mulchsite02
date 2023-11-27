@@ -13,7 +13,7 @@
             $price02 = $_POST["price-02"];
             $inStock = $_POST["in-stock"];
             
-            if ($idNum < 1 || $idNum > 20) {
+            if ($idNum < 1 || $idNum > 21) {
                 echo "product id is out of range."; 
             }
             else {
