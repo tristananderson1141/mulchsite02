@@ -48,22 +48,25 @@ function populateTableData(objs) {
 
         if (i > 9) {
             curNameTag = "0" + i;
-            curPriceTag = "0" + i + "PRC";
+            //curPriceTag = "0" + i + "PRC"; --> Hiding Pricing August 26th, 2025
         }
         else {
             curNameTag = "00" + i;
-            curPriceTag = "00" + i + "PRC";
+            //curPriceTag = "00" + i + "PRC"; --> Hiding Pricing August 26th, 2025
         }
 
         document.getElementById(curNameTag).innerHTML = objs[i - 1].name;
         
-        //check if price01 is populated else use price02
-        if (objs[i - 1].price01 == "$ ---") {
-            document.getElementById(curPriceTag).innerHTML = objs[i - 1].price02;
-        }
-        else {
-            document.getElementById(curPriceTag).innerHTML = objs[i - 1].price01;
-        }
+        /*
+        * --> Hiding Pricing August 26th, 2025
+        * check if price01 is populated else use price02
+        * if (objs[i - 1].price01 == "$ ---") {
+        *     document.getElementById(curPriceTag).innerHTML = objs[i - 1].price02;
+        * }
+        * else {
+        *     document.getElementById(curPriceTag).innerHTML = objs[i - 1].price01;
+        * }
+        */
     }
 }
     
@@ -108,8 +111,8 @@ function displaySelectProduct(val) {
     modalImage.src = productLine[val].image;
     quant01.innerHTML = productLine[val].quantity01;
     quant02.innerHTML = productLine[val].quantity02;
-    price01.innerHTML = productLine[val].price01;
-    price02.innerHTML = productLine[val].price02;
+    //price01.innerHTML = productLine[val].price01; --> Hiding Pricing August 26th, 2025 
+    //price02.innerHTML = productLine[val].price02;
     
     available = productLine[val].stock;
     if (available == "true") {
